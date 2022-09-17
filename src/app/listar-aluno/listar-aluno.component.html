@@ -1,0 +1,26 @@
+<app-atualizar-aluno *ngIf="mostrar" [aluno]="aluno"></app-atualizar-aluno>
+<button (click)="listar()" type="submit" class="btn btn-danger">Atualizar tabela</button>
+<table class="table table-hover bg-light rounded">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Matricula</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngIf="alunos.length == 0">
+        <td class="center" colspan="4">Nenhum usuario encontrado</td>
+      </tr>
+    <tr *ngFor="let item of alunos">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.nome}}</td>
+      <td>{{item.matricula}}</td>
+      <td><button (click)="excluir(item.id)" type="submit" class="btn btn-danger">Excluir</button></td>
+      <td><button (click)="editar(item)" type="submit" class="btn btn-secundary">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
+
+

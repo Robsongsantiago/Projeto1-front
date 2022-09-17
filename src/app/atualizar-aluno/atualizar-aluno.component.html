@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit)="editar()">
+  <div class="mb-3">
+    <label for="nome" class="form-label text-light">Nome:</label>
+    <input formControlName="nome" type="text" class="form-control" id="nome" placeholder="Digite...">
+  </div>
+  <div class="mb-3">
+    <label for="matricula" class="form-label text-light">Matricula:</label>
+    <input formControlName="matricula" type="text" class="form-control" id="matricula" placeholder="Digite...">
+  </div>
+  <button type="submit" class="btn btn-light">Atualizar aluno</button>
+</form>
